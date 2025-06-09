@@ -5,14 +5,13 @@ from time import perf_counter
 from PIL import Image, ImageFilter
 
 filenames = [
-    "images/1.jpg",
-    "images/2.jpg",
-    "images/3.jpg",
-    "images/4.jpg",
-    "images/5.jpg",
+    "images/cat.png",
+    "images/kitten.png",
+    "images/cat1.png",
+    "images/kitten1.png",
 ]
 
-def thumbnail(filename: str, size=(50,50), thumb_dir="thumbs"):
+def thumbnail(filename: str, size=(150,150), thumb_dir="thumbs"):
     # Open the image
     img = Image.open(filename)
     # Apply the gaussian blur filter

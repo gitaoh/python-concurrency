@@ -2,8 +2,8 @@ from threading import Thread
 from time import sleep, perf_counter
 
 
-def task(id):
-    print(f"Starting task({id})....")
+def task(uuid):
+    print(f"Starting task({uuid})....")
     sleep(1)
     print("Done")
 
@@ -11,7 +11,7 @@ def task(id):
 start = perf_counter()
 
 # Create and start 10 threads
-threads = []
+threads: list[Thread] = []
 for n in range(1, 11):
     t = Thread(target=task, args=(n,))
     threads.append(t)

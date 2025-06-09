@@ -10,7 +10,7 @@ def show_timer():
         print(f"Has been waiting for {count} seconds....")
 
 
-t = Thread(target=show_timer)
+t = Thread(target=show_timer, daemon=True)
 t.start()
 
 ans = input("Exit Y/N: \n")
